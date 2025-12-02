@@ -1,0 +1,200 @@
+
+    <!DOCTYPE html>
+    <html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grant Scout v2.4.5</title>
+        <style>
+            * { box-sizing: border-box; }
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                margin: 0;
+                padding: 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+            }
+            .container {
+                max-width: 1500px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            }
+            h1 { color: #667eea; font-size: 28px; margin-bottom: 10px; }
+            h2 { color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 10px; }
+            .stats {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin: 20px 0;
+            }
+            .stat-card {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 20px;
+                border-radius: 8px;
+                text-align: center;
+            }
+            .stat-number { font-size: 28px; font-weight: bold; }
+            .stat-label { font-size: 12px; opacity: 0.9; margin-top: 5px; }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 15px;
+            }
+            th {
+                background: #667eea;
+                color: white;
+                padding: 12px;
+                text-align: left;
+                font-size: 13px;
+            }
+            td {
+                padding: 12px;
+                border-bottom: 1px solid #e9ecef;
+            }
+            tr:hover { background: #f8f9fa; }
+            .badge {
+                display: inline-block;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 11px;
+                font-weight: 600;
+            }
+            .badge-upload { background: #d4edda; color: #155724; }
+            .badge-high { background: #28a745; color: white; }
+            .badge-medium { background: #ffc107; color: black; }
+            .badge-low { background: #dc3545; color: white; }
+            .info-box {
+                background: #d1ecf1;
+                border: 1px solid #bee5eb;
+                color: #0c5460;
+                padding: 15px;
+                border-radius: 6px;
+                margin: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>🚀 Grant Scout Agent v2.4.5 - IMPROVED PARSER</h1>
+            <p style="color: #666; font-size: 14px;">Data: <strong>02.12.2025 21:16</strong></p>
+
+            <div class="info-box">
+                ⚡ <strong>v2.4.5 New!</strong> Ulepszona ekstrakcja JSON - 4 strategie parsowania!
+            </div>
+
+            <h2>📊 Statystyka</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Granty znalezione</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">11</div>
+                    <div class="stat-label">Projekty w gminie</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">11</div>
+                    <div class="stat-label">Projekty domyślne</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Projekty z uploadów 🤖</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Matchowania grantów</div>
+                </div>
+            </div>
+    
+            <h2>💰 Granty ze SMART Matching</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Grant</th>
+                        <th>Przypisane projekty</th>
+                        <th>Kwota</th>
+                        <th>Deadline</th>
+                        <th>Match %</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+                    <tr>
+                        <td><strong>KPO - Cyfrowa Polska</strong></td>
+                        <td><div style="font-size: 12px;">• Centrum Kompetencji AI<br></div></td>
+                        <td>PLN 3,000,000</td>
+                        <td>2025-12-10</td>
+                        <td><span class="badge badge-high">98%</span></td>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>Horizon Europe - Digital Europe Programme</strong></td>
+                        <td><div style="font-size: 12px;">• Centrum Kompetencji AI<br></div></td>
+                        <td>PLN 2,000,000</td>
+                        <td>2025-12-15</td>
+                        <td><span class="badge badge-high">95%</span></td>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>Ochrona Zasobów Wodnych</strong></td>
+                        <td><div style="font-size: 12px;">• Oczyszczalnia Sciekow<br></div></td>
+                        <td>PLN 2,500,000</td>
+                        <td>2026-01-10</td>
+                        <td><span class="badge badge-high">90%</span></td>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>Fundusz Klimatyczny - OZE dla Gmin</strong></td>
+                        <td><div style="font-size: 12px;">• Energetyka Odnawialna - Panele<br></div></td>
+                        <td>PLN 1,500,000</td>
+                        <td>2026-01-20</td>
+                        <td><span class="badge badge-high">88%</span></td>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>Innowacyjne Rozwiazania dla Gmin</strong></td>
+                        <td><div style="font-size: 12px;">• Oprogramowanie Zarzadzania<br></div></td>
+                        <td>PLN 1,000,000</td>
+                        <td>2026-01-15</td>
+                        <td><span class="badge badge-high">85%</span></td>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>Program Rozwoju Edukacji</strong></td>
+                        <td><div style="font-size: 12px;">• Szkoła Podstawowa - Remont<br>• Przedszkole Samorządowe<br></div></td>
+                        <td>PLN 800,000</td>
+                        <td>2025-12-30</td>
+                        <td><span class="badge badge-high">82%</span></td>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>Modernizacja Transportu Publicznego</strong></td>
+                        <td><div style="font-size: 12px;">• Komunikacja Publiczna<br></div></td>
+                        <td>PLN 1,200,000</td>
+                        <td>2026-02-01</td>
+                        <td><span class="badge badge-medium">75%</span></td>
+                    </tr>
+        
+                    <tr>
+                        <td><strong>Program Rozwoju Sportu Lokalnego</strong></td>
+                        <td><div style="font-size: 12px;">• Boisko Sportowe<br></div></td>
+                        <td>PLN 500,000</td>
+                        <td>2025-12-28</td>
+                        <td><span class="badge badge-medium">70%</span></td>
+                    </tr>
+        
+                </tbody>
+            </table>
+
+            <p style="text-align: center; color: #999; margin-top: 40px; font-size: 12px;">
+                Raport wygenerowany: Grant Scout Agent v2.4.5 IMPROVED PARSER<br>
+                © 2025 Gmina Czaplinka
+            </p>
+        </div>
+    </body>
+    </html>
+    
